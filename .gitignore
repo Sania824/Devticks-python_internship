@@ -5,3 +5,6 @@
 *.iws
 *.xml
 
+*.pyc
+__pycache__/
+pycache/
