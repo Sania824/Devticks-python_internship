@@ -1,0 +1,6 @@
+INFO:root:Running "add" with arguements (3, 5)
+INFO:root:Running "subtract" with arguements (5, 0)
+INFO:root:Running "add" with arguments (3, 5)
+INFO:root:Running "subtract" with arguments (5, 0)
+INFO:root:Running "add" with arguments (3, 5)
+INFO:root:Running "subtract" with arguments (5, 0)
