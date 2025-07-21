@@ -104,7 +104,7 @@ class SavingsAccount(BankAccount):
               f'Account Holder Name: {self.get_account_holder_name}\n'
               f'Account Balance: {self.check_balance}\n'
               f'Minimum Balance: {self.__min_balance}\n'
-              f'Account Interest: {self.interest_rate * 10}%\n')
+              f'Account Interest: {self.interest_rate * 10}%')
 
 class Taxable(BankAccount):
     tax_rate = 0.1 # 10%
@@ -130,20 +130,22 @@ class PremiumSavingsAccount(SavingsAccount, Taxable, Insured):
 
     def premium_acc_summary(self):
         print(f'Premium Account Details\n')
-        print(self.acc_summary())
-        print(f"Tax Liability: Rs. {self.calculate_tax()}\n")
+        self.acc_summary()
+        print(f"Tax Liability: Rs. {self.calculate_tax()}")
         self.display_insurance()
 
 premium_acc = PremiumSavingsAccount('123456789', 600000, 'Sania')
-premium_acc.acc_summary()
-premium_acc.deposit(10000)
-premium_acc.acc_summary()
-premium_acc.withdraw(5000)
-premium_acc.acc_summary()
-premium_acc.calculate_tax() # tax to be implemented is Rs. 60,500
+premium_acc.premium_acc_summary()
+# saving_acc = SavingsAccount('123456789', '600000', 'Sania')
+# saving_acc.acc_summary()
+# premium_acc.deposit(10000)
+# premium_acc.acc_summary()
+# premium_acc.withdraw(5000)
+# premium_acc.acc_summary()
+# premium_acc.calculate_tax() # tax to be implemented is Rs. 60,500
 # premium_acc.acc_summary()
 # print(premium_acc.display_insurance())
-premium_acc.premium_acc_summary()
+# premium_acc.premium_acc_summary()
 
 #
 # acc1 = BankAccount('123456789', 56000, 'Sania')
